@@ -2936,8 +2936,8 @@ void load_game_menu(const char *filename, int i,char username[30]) {
                     mvprintw(LINES / 2, (COLS - strlen("Exiting...")) / 2, "Exiting...");
                     refresh();
                     usleep(1000000);
-                    endwin();
-                    exit(0);
+                    
+                    show_menu();
                 }
                 break;
         }
@@ -3012,10 +3012,10 @@ void show_menu() {
                         clear();
                         break;
                     case 4:
-                        return ;
+                        break ;
                 }
                 
-                break;
+                return;
         }
     }while(1);
 }
